@@ -1,7 +1,8 @@
 import sys
-import config
-from tornado.gen import coroutine
+import app.config as config
+import pymongo
 
+# con = pymongo.MongoClient(host=config.host, port=config.port)
 class InsertObject(object):
 
     def __init__(self, con):
@@ -11,10 +12,9 @@ class InsertObject(object):
         except:
             print("error::__init>>", sys.exc_info()[1])
 
-    @coroutine
     def InsertOne(self, data):
         try:
-            self._collection.insert_one(data)
+            self._collection.insert(data)
         except:
             print("error::InsertOne>>", sys.exc_info()[1])
 

@@ -1,5 +1,6 @@
 # change according to project req
 host = "localhost"
-port = 32771
+port = 32768
 db_name = "Tempdata"
-collection_name = "maincollectio"
+collection_name = "maincollection"
+MAX_WORKERS = 50
