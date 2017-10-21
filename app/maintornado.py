@@ -38,7 +38,7 @@ class ParserInsert(object):
         except:
             tempdict["facility"] = None
         tempdict["source"] = "cleartrip"
-        self._dbObject.InsertOne(data=tempdict.copy())
+        # self._dbObject.InsertOne(data=tempdict.copy())
         return tempdict
 
     def _clertripFucntion(self,data):
@@ -133,7 +133,16 @@ class MainHandler(tornado.web.RequestHandler):
 
 class MainHandler2(tornado.web.RequestHandler):
     def get(self):
-        items = ["Item 1", "Item 2", "Item 3"]
+        q = self.get_argument("name")
+        rev = str(q)[::-1]
+        tempdict = {}
+        tempdict["reverse"] = rev
+        tempdict["name"] = q
+        tempdict["len"] = str(len(q))
+        items = [tempdict["name"], tempdict["len"], rev]
+        global con
+        insertObj = InsertObject(con = con)
+        insertObj.InsertOne(tempdict.copy())
         self.render("abc.html", title="My title", items=items)
 
 def make_app():
@@ -147,3 +156,11 @@ if __name__ == "__main__":
     app = make_app()
     app.listen(8888)
     loop = tornado.ioloop.IOLoop.current().start()
+
+
+    '''
+    1. test url for processing data from cleartrip::
+    http://localhost:8888/hotel/api?startDate=27/10/2017&endDate=14/11/2017&adults=3&children=2&source=cleartrip&City=Goa&State=Goa
+    2. for checking server is alive :
+    http://localhost:8888/webpage
+    '''
