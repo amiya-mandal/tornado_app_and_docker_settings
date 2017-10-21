@@ -8,12 +8,12 @@ using tornado as a web frame work and mongodb as db
 import tornado.ioloop
 import tornado.web
 import pymongo
-import app.config as config
+import config as config
 import ujson
 from tornado.gen import *
 import tornado.gen
 from tornado.concurrent import run_on_executor
-from app.Model.model_db_connection import InsertObject
+from Model.model_db_connection import InsertObject
 from concurrent.futures import ThreadPoolExecutor
 import math
 import requests
@@ -125,8 +125,10 @@ class MainHandler(tornado.web.RequestHandler):
             self._source = self.get_argument("source")
         except:
             self.write_error(400)
+            self.finish()
         data = yield self._requestmodule()
         self.write(str(data))
+        self.finish()
 
 
 class MainHandler2(tornado.web.RequestHandler):
