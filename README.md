@@ -50,7 +50,7 @@ you can change :-
   * City
   * State
 
-<a href = "https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/data.png">data in json format</a>
+<a href = "https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/data.png">data in json format</a><br>
 __Note: I am working on  makemytrip data scraping but they are fetching data using post method so, it's under process__
 ### Now setting docker container
 
