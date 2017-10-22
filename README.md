@@ -82,7 +82,7 @@ docker container ls
 ```
 9. now check for service by hitting http://localhost:8888/webpage?name=mark<br>
 service is running fine<br>
-__NOTE:-All load balancing is done by the docker itself, so no additional load balancing is packages or software is required, reffer here [link](http://localhost:8888/webpage?name=mark)__  
+__NOTE:-All load balancing is done by the docker itself, so no additional load balancing is packages or software is required, reffer here [link](https://docs.docker.com/get-started/part3/#run-your-new-load-balanced-app)__  
 
 ### Now for benchmark
 used:
@@ -93,11 +93,11 @@ __useage__
 
 for creating replicas check for <em>docker-composer.yml</em>
 
-[for 1 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_1.png", )
+[for_1_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_1.png", )
 <br>
-[for 5 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_5.png")
+[for_5_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_5.png")
 <br>
-[for 10 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_10.png")
+[for_10_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_10.png")
 <br>
 
 
