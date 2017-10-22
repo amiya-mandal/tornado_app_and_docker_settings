@@ -70,7 +70,7 @@ http://localhost:8888/webpage?name=mark
 ```
 docker swarm init
 ```
-6. now we have to deploy our image in swarm 
+6. now we have to deploy our image in swarm
 7. so in the project we have docker-composer.yml, it contain all the setting required for swarm so we run the code below
 ```
 docker stack deploy -c docker-compose.yml mytornadoappdeploystack
@@ -80,3 +80,27 @@ docker stack deploy -c docker-compose.yml mytornadoappdeploystack
 docker service ls
 docker container ls
 ```
+9. now check for service by hitting http://localhost:8888/webpage?name=mark<br>
+service is running fine<br>
+__NOTE:-All load balancing is done by the docker itself, so no additional load balancing is packages or software is required, reffer here [link](http://localhost:8888/webpage?name=mark)__  
+
+### Now for benchmark
+used:
+ * apache benchmark
+
+__useage__
+  *  ab -n 10000 -c 1000 http://localhost:8888/webpage?name=mark
+
+for creating replicas check for <em>docker-composer.yml</em>
+
+![for 1 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_1.png", )
+<br>
+![for 5 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_5.png")
+<br>
+![for 10 swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_10.png")
+<br>
+
+
+
+
+##### Note:- all scraping is done will edcational purpose only, so please use it for study only
