@@ -93,11 +93,11 @@ __useage__
 
 for creating replicas check for <em>docker-composer.yml</em>
 
-[for_1_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_1.png", )
+<a href="https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_1.png">for_1_swarm</a>
 <br>
-[for_5_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_5.png")
+<a href="https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_5.png">for_5_swarm</a>
 <br>
-[for_10_swarm]("https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_10.png")
+<a href="https://github.com/nooby-amiya/tornado_app_and_docker_settings/blob/master/deploy_on_stack_of_10.png">for_10_swarm</a>
 <br>
 
 
